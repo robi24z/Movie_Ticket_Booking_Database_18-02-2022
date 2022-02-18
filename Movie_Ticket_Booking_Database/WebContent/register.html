@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel='stylesheet' type='text/css' />
+<title>Insert title here</title>
+<script type="text/javascript">
+	function IsEmpty() {
+
+		if (document.form2.first.value == "") {
+			alert("Please fill in all the fields");
+		}
+		return;
+	}
+	function IsEmpty() {
+
+		if (document.form2.last.value == "") {
+			alert("Please fill in all the fields");
+		}
+		return;
+	}
+	function IsEmpty() {
+
+		if (document.form2.gender.value == "") {
+			alert("Please fill in all the fields");
+		}
+		return;
+	}
+	function IsEmpty() {
+
+		if (document.form2.city.value == "") {
+			alert("Please fill in all the fields");
+		}
+		return;
+	}
+	function IsEmpty() {
+
+		if (document.form2.country.value == "") {
+			alert("Please fill in all the fields");
+		}
+		return;
+	}
+	function IsEmpty() {
+
+		if (document.form2.password.value == "") {
+			alert("Please fill in all the fields");
+		}
+		return;
+	}
+	function ValidateEmail(inputText) {
+		var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+		if (inputText.value.match(mailformat)) {
+			document.form2.login2.focus();
+			return true;
+		} else {
+			alert("You have entered an invalid email address!");
+			return false;
+		}
+	}
+</script>
+<style type="text/css">
+a:link {
+	text-decoration: none;
+}
+
+a:visited {
+	text-decoration: none;
+}
+
+.container {
+	background-color: #cc0066;
+	width: 500px;
+	height: 500px;
+	text-align: center;
+	box-shadow: 15px 1px 15px 10px;
+	color: #FFFE0;
+	bottom: 0;
+	top: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	position: absolute;
+}
+
+.l1 {
+	font-family: monospace;
+	color: white;
+	font-size: 12px
+}
+
+.l2 {
+	font-size: 15px;
+	color: white;
+}
+
+.parent {
+	background-image: url("background.jpg");
+	width: 1200px;
+	height: 900px;
+}
+
+.link {
+	color: white;
+}
+</style>
+
+</head>
+<body>
+	<div class="parent">
+		<div class="container">
+			<h4 align="center" class="l2">Sign up</h4>
+			<form name="form2">
+				<div>
+					<label class="l1">First name </label> <input type="text"
+						placeholder="First Name" name="first">
+				</div>
+				<br>
+				<div>
+					<label class="l1">Last name </label> <input type="text"
+						placeholder="Last Name" name="last">
+				</div>
+				<br>
+				<div>
+					<label class="l1">Email address </label> <input type="text"
+						placeholder="Enter your e-mail"> <br>
+				</div>
+				<br>
+				<div class="l1">
+					<label> Gender: </label> <label> <input type="radio"
+						name="gender" value="option1"> <span> Male </span>
+					</label> <label> <input type="radio" name="gender" value="option2">
+						<span> Female </span>
+					</label> <label> <input type="radio" name="gender" value="option3">
+						<span> Other </span></label>
+				</div>
+				<br>
+				<div>
+					<label class="l1">City</label> <input type="text" name="city">
+				</div>
+				<br>
+				<div>
+					<label class="l1">Country</label> <select id="">
+						<option>Select</option>
+						<option>Afganistan</option>
+						<option>India</option>
+						<option>Pakistan</option>
+						<option>Russia</option>
+						<option>United States</option>
+						<option>UAE</option>
+						<option>Uzbekistan</option>
+					</select>
+				</div>
+				<br>
+				<div>
+					<label class="l1">Create password</label> <input type="password"
+						name="password">
+				</div>
+				<br>
+				<div>
+					<input type="submit" name="login2" value="Register"
+						onclick=" ValidateEmail(document.form2.login2);IsEmpty();">
+				</div>
+				<br> <small class="l1">By clicking the 'Register'
+					button, you confirm that you accept our <br> Terms of use and
+					Privacy Policy.
+				</small>
+			</form>
+			<br>
+			<div class="l1">
+				Already have an account? <a href="login.html" class="l1">Log In
+					| </a> <a href="home.html" class="link">Home</a>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>
